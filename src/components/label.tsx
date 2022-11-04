@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './label.css';
 
 interface LabelProps {
@@ -20,13 +20,12 @@ export const Label = ({
   url,
   ...props
 }: LabelProps) => {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
   return (
     <label
       {...props}
     >
-      {label} - {count} - {url}
-      <button onClick={() => setCount(count + 1)}>Incrementar</button>
+      {label} - {url}
     </label>
   );
 };
